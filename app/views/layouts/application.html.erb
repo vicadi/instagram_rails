@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Instagram</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div id="user_nav">
+	<% if user_instagram %>
+		Bienvenido/a <strong><%= user_instagram.name%></strong>
+		<%= link_to "Salir", signout_path, id: "sign_out" %>
+	<% else %>
+		<%= link_to "Autenticarse con Instagram", "/auth/instagram", id: "sign_in"%>
+	<% end %>
+</div>
+
+<%= yield %>
+
+</body>
+</html>
