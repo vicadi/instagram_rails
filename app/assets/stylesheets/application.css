@@ -1,15 +1,132 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+h1{
+	width: 100%;
+	text-align: center;
+	color: #125e6e;
+	font-size: 200%;
+}
+
+#div_sign_in{
+	width: 40%;
+	margin: 2% 30%;
+	float: left;
+	border-radius: 10px;
+	background-color: black;
+}
+
+img#icono{
+	width: 40%;
+	margin: 4% 30% 1% 30%;
+	text-align: center;
+	float: left;
+}
+
+a#sign_in{
+	width: 90%;
+	margin: 1% 5%;
+	float: left;
+	text-align: center;
+	text-decoration: none;
+	font-size: 180%;
+	color: white;
+}
+
+a#sign_in:hover{
+	text-decoration: underline;
+}
+
+#div_sign_out{
+	width: 70%;
+	margin: 2% 15%;
+	float: left;
+	border-radius: 10px;
+	border: 3px solid #125e6e;
+}
+
+h3{
+	width: 90%;
+	margin: 2% 5%;
+	float: left;
+	color: #125e6e;
+	font-size: 20px;
+	text-align: right;
+}
+
+h3 a{
+	color: black;
+	text-decoration: none;
+}
+
+h3 a:hover{
+	text-decoration: underline;
+}
+
+#div_info_user{
+	width: 80%;
+	margin: 2% 10%;
+	float: left;
+	border-bottom: 2px solid #125e6e;
+}
+
+#div_image_user{
+	width: 49%;
+	float: left;
+	text-align: center;
+	border-right: 2px solid #125e6e;
+}
+
+#div_data_user{
+	width: 47%;
+	float: left;
+	padding-left: 2%;
+}
+
+#div_media_user{
+	width: 60%;
+	margin: 2% 20%;
+	float: left;
+	text-align: center;
+}
+
+#div_media_user h2{
+	width: 100%;
+	float: left;
+	text-align: center;
+	color: black;
+}
+
+#div_media_user img{
+	width: 70%;
+	border:2px solid black;
+	border-radius: 10px;
+	padding: 3%;
+	margin: 2%
+}
+
+@media (max-width:800px){
+	#div_info_user div{
+		width: 90% !important;
+		margin: 0 5% !important;
+	}
+
+	#div_image_user{
+		border: none;
+	}
+
+	#div_media_user{
+		width: 90% !important;
+		margin: 2% 5% !important;
+	}
+}
+
+.footer{
+	left: 0;
+	bottom: 0 !important;
+	float: left;
+	width: 100%;
+	border-top:2px solid #125e6e;
+	text-align: center;
+}
+
+.footer p{
+	font-size: 100%;
+}

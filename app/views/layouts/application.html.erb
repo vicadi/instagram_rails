@@ -7,17 +7,24 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<div id="user_nav">
-	<% if user_instagram %>
-		Bienvenido/a <strong><%= user_instagram.name%></strong>
-		<%= link_to "Salir", signout_path, id: "sign_out" %>
-	<% else %>
+<h1>DEMO - INSTAGRAM - RAILS</h1>
+<% if user_instagram %>
+	<div id="div_sign_out">
+		<h3>
+			Bienvenido/a <strong><%= user_instagram.name%></strong>
+			<br>
+			<%= link_to "Salir", signout_path, id: "sign_out" %>
+		</h3>
+		<%= yield %>
+	</div>	
+<% else %>
+	<div id="div_sign_in">
+		<img src="instagram.png" id="icono">
 		<%= link_to "Autenticarse con Instagram", "/auth/instagram", id: "sign_in"%>
-	<% end %>
-</div>
-
-<%= yield %>
-
+	</div>
+<% end %>
+<footer class="footer">
+	<p><strong>Hecho por: </strong>Arley Carantón Galeano - Viviana Cadena Díaz</p>
+</footer>
 </body>
 </html>

@@ -1,7 +1,22 @@
-<% if @instagram %>
-	<% @instagram.each do |instagram| %>
+<div id="div_info_user">
+	<% if @data %>
+		<div id="div_image_user">
+			<%= image_tag @data["info"]["image"] %>			
+		</div>
+		<div id="div_data_user">
+			<p><strong>Nickname: </strong><%= @data["info"]["nickname"] %></p>
+			<p><strong>Biography: </strong><%= @data["info"]["bio"] %></p>
+			<p><strong>Website: </strong><%= @data["info"]["website"] %></p>
+		</div>
+	<% end %>
+</div>
+<div id="div_media_user">
+	<% if @instagram %>
+		<h2>Imágenes Recientes</h2>
+		<% @instagram.each do |instagram| %>
 
-    	<%= image_tag instagram.images.standard_resolution.url %>
+	    	<%= image_tag instagram.images.standard_resolution.url %>
 
-    <% end %>
-<% end %>	
+	    <% end %>
+	<% end %>
+</div>	
