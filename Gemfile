@@ -38,5 +38,5 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-gem 'instagram', '1.1.4'
-gem 'omniauth-instagram', '1.0.1'
+gem 'instagram', '1.1.5'
+gem 'omniauth-instagram', '1.0.2'
